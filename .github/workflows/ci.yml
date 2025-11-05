@@ -10,8 +10,10 @@ jobs:
       - name: List files
         run: ls -la
 
-      - name: list bin
-        run: ls /bin
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
       - name: Print hello
         run: echo "Hello from GitHub Actions!"
